@@ -31,79 +31,122 @@
                   <li><a class="dropdown-item" href="user.html">User</a></li>
                 </ul>
               </div>
-        <nav>
+              <nav style="width:15rem">
           <ul class="nav flex-column nav nav-pills p-3">
             <li class="pb-2">Purchase</li>
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="request.html">
-                <svg class="bi" width="32" height="32" fill="currentColor">
+                <svg class="bi me-2" width="32" height="32" fill="currentColor">
                   <use xlink:href="./node_modules/bootstrap-icons/bootstrap-icons.svg#cart" /></svg
                 >Requests</a
               >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="product.html"
-                ><svg class="bi" width="32" height="32" fill="currentColor">
+                ><svg class="bi me-2" width="32" height="32" fill="currentColor">
                   <use xlink:href="./node_modules/bootstrap-icons/bootstrap-icons.svg#grid" /></svg
                 >Products</a
               >
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="vendor.html">
-                <svg class="bi" width="32" height="32" fill="currentColor">
+                <svg class="bi me-2" width="32" height="32" fill="currentColor">
                   <use xlink:href="./node_modules/bootstrap-icons/bootstrap-icons.svg#building" /></svg
                 >Vendors</a
               >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="vendor-create.html">
-                <svg class="bi" width="32" height="32" fill="currentColor">
+                <svg class="bi me-2" width="32" height="32" fill="currentColor">
                   <use xlink:href="./node_modules/bootstrap-icons/bootstrap-icons.svg#people" /></svg
-                >Users</a
-              >
+                >Users</a>
             </li>
           </ul>
         </nav>
       </div>
-      <section class="container">
+      <section class="container-fluid ps-5 p-2">
         <h2 class="container-fluid justify-content-between d-flex p-4">
           New Vendor
         </h2>
         <hr>
-        <div class="mb-3">
-            <label for="vendor code">Vendor Code</label>
-            <input id="vendor code" name="vendor code" type="text" value="" placeholder="Enter short vendor code" />
+        <form class="mt-4 row g-md-5">
+            <div class="col-md-5">
+              <label class="form-label" for="vendor code">Vendor Code</label>
+              <br>
+              <input id="vendor code" class="form-control is-invalid" type="text" value="" placeholder="Enter short vendor code" />
+              <div class="invalid-feedback">Code is required
+              </div>
+            </div>
+            <div class="col-md-7">
+              <label class="form-label" for="vendor name">Vendor Name</label>
+              <br>
+              <input id="vendor name" class="form-control is-invalid" type="text" value="" placeholder="Enter vendor name" />
+              <div class="invalid-feedback">Name is required
+              </div>
+         
           </div>
-          <div class="mb-3">
-            <label for="vendor name">Vendor Name</label>
-            <input id="vendor name" name="vendor name" type="text" value="" placeholder="Enter vendor name" />
+   
+            <div class="col-md-12">
+              <label class="form-label" for="address">Address</label>
+              <br>
+              <input id="address" class="form-control is-invalid" type="text" value="" placeholder="Enter vendor's address" />
+              <div class="invalid-feedback">Address is required
+              </div>
+            <!-- </div> -->
           </div>
-          <div class="mb-3">
-            <label for="address">Address</label>
-            <input id="address" name="address" type="text" value="" placeholder="Enter vendor's address" />
+            <!-- <div class="row"> -->
+            <div class="col-md-4">
+              <label class="form-label" for="city">City</label>
+              <br>
+              <input id="city" class="form-control is-invalid" type="text" value="" placeholder="Enter city" />
+              <div class="invalid-feedback">City is required
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label" for="state">State</label>
+              <br>
+              <select class="form-select is-invalid" id="state">
+                <option value="">Select...</option>
+                <option value="1">Georgia</option>
+                <option value="2">Ohio</option>
+                <option value="3">Florida</option>
+              </select>
+              <div class="invalid-feedback">Name is required
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label" for="zip">Zip</label>
+              <br>
+              <input id="zip" class="form-control is-invalid" type="text" value="" placeholder="Enter zip code" />
+              <div class="invalid-feedback">Zip is required
+              </div>
+            <!-- </div> -->
           </div>
-          <div class="mb-3">
-            <label for="city">City</label>
-            <input id="city" name="city" type="text" value="" placeholder="Enter city" />
-          </div>
-          <div class="mb-3">
-            <label for="state">State</label>
-            <select name="state" id="state">
-              <option value="">Select...</option>
-              <option value="1">Georgia</option>
-              <option value="2">Ohio</option>
-              <option value="3">Florida</option>
-            </select>
-          </div>
-          <div class="mb-3">
-            <label for="zip">Zip</label>
-            <input id="zip" name="zip" type="text" value="" placeholder="Enter zip code" />
-          </div>
-          <div class="mb-3">
-            <a href="">Cancel</a>
-          </div class="mb-3">
-          <button>Save Vendor</button>
+          <!-- <div class="row"> -->
+            <div class="col-md-5">
+              <label class="form-label" for="phone">Phone</label>
+              <br>
+              <input id="phone" class="form-control" type="text" value="" placeholder="Enter phone number" />
+            </div>
+            <div class="col-md-7">
+              <label class="form-label" for="email">Email</label>
+              <br>
+              <input id="email" class="form-control" type="text" value="" placeholder="Enter email address" />
+            </div>
+     
+        <!-- </div> -->
+          <div class="flex-row d-flex justify-content-end mb-3 mt-4">
+            <a class="btn btn-outline-primary ms-auto me-2" href="cancel.html">
+             Cancel
+            </a>
+          <a class="btn btn-primary" href="save-vendor.html">
+            <svg class="bi" width="25" height="25" fill="currentColor">
+              <use xlink:href="./node_modules/bootstrap-icons/bootstrap-icons.svg#save" />
+            </svg>
+           Save vendor
+          </a>
         </div>
+      </form>
       </section>
     </main>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
